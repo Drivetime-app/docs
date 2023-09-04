@@ -16,18 +16,17 @@ describe('Permalink class', () => {
       'en',
       'index.md',
       'Hello World',
-      getApplicableVersions(versions)
+      getApplicableVersions(versions),
     )
     expect(permalinks.length).toBeGreaterThan(1)
     const homepagePermalink = permalinks.find(
-      (permalink) => permalink.pageVersion === nonEnterpriseDefaultVersion
+      (permalink) => permalink.pageVersion === nonEnterpriseDefaultVersion,
     )
     expect(homepagePermalink.href).toBe('/en')
   })
 
   test('derives info for non-enterprise versioned homepage', () => {
     const permalink = new Permalink('en', nonEnterpriseDefaultVersion, 'index.md', 'Hello World')
-    expect(permalink.pageVersionTitle).toBe('Free, Pro, & Team')
     expect(permalink.href).toBe('/en')
   })
 
@@ -36,9 +35,8 @@ describe('Permalink class', () => {
       'en',
       `enterprise-server@${enterpriseServerReleases.latest}`,
       'index.md',
-      'Hello World'
+      'Hello World',
     )
-    expect(permalink.pageVersionTitle).toBe(`Enterprise Server ${enterpriseServerReleases.latest}`)
     expect(permalink.href).toBe(`/en/enterprise-server@${enterpriseServerReleases.latest}`)
   })
 
@@ -47,9 +45,8 @@ describe('Permalink class', () => {
       'en',
       nonEnterpriseDefaultVersion,
       'github/index.md',
-      'Hello World'
+      'Hello World',
     )
-    expect(permalink.pageVersionTitle).toBe('Free, Pro, & Team')
     expect(permalink.href).toBe('/en/github')
   })
 
@@ -58,9 +55,8 @@ describe('Permalink class', () => {
       'en',
       `enterprise-server@${enterpriseServerReleases.latest}`,
       'github/index.md',
-      'Hello World'
+      'Hello World',
     )
-    expect(permalink.pageVersionTitle).toBe(`Enterprise Server ${enterpriseServerReleases.latest}`)
     expect(permalink.href).toBe(`/en/enterprise-server@${enterpriseServerReleases.latest}/github`)
   })
 

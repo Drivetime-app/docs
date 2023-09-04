@@ -16,27 +16,29 @@ topics:
   - Networking
 shortTitle: Configure DNS servers
 ---
-The nameservers you specify must resolve {% data variables.product.product_location %}'s hostname.
+The nameservers you specify must resolve {% data variables.location.product_location %}'s hostname.
 
 {% data reusables.enterprise_installation.changing-hostname-not-supported %}
 
 ## Configuring nameservers using the virtual machine console
 
 {% data reusables.enterprise_installation.open-vm-console-start %}
-2. Configure nameservers for your instance.
+1. Configure nameservers for your instance.
 {% data reusables.enterprise_installation.vm-console-done %}
 
 ## Configuring nameservers using the administrative shell
 
 {% data reusables.enterprise_installation.ssh-into-instance %}
-2. To edit your nameservers, enter:
-  ```shell
-  $ sudo vim /etc/resolvconf/resolv.conf.d/head
-  ```
-3. Append any `nameserver` entries, then save the file.
-4. After verifying your changes, save the file.
-5. To add your new nameserver entries to {% data variables.product.product_location %}, run the following:
-  ```shell
-  $ sudo service resolvconf restart
-  $ sudo service dnsmasq restart
-  ```
+
+1. To edit your nameservers, use the `ghe-setup-network` command in visual mode. For more information, see "[AUTOTITLE](/admin/configuration/configuring-your-enterprise/command-line-utilities#ghe-setup-network)."
+
+   ```shell
+   ghe-setup-network -v
+   ```
+
+1. To add your new nameserver entries to {% data variables.location.product_location %}, run the following:
+
+   ```shell
+   sudo service resolvconf restart
+   sudo service dnsmasq restart
+   ```

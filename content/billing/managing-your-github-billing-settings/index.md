@@ -14,8 +14,11 @@ redirect_from:
 versions:
   fpt: '*'
   ghec: '*'
+  ghes: '*'
+  ghae: '*'
 children:
   - /about-billing-on-github
+  - /about-billing-for-your-enterprise
   - /viewing-your-subscriptions-and-billing-date
   - /adding-or-editing-a-payment-method
   - /viewing-your-payment-history-and-receipts
@@ -25,6 +28,4 @@ children:
   - /redeeming-a-coupon
   - /troubleshooting-a-declined-credit-card-charge
   - /unlocking-a-locked-account
-  - /removing-a-payment-method
 ---
-

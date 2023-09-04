@@ -2,17 +2,18 @@
   [class~="highlight"] pre,
   pre {
     margin-top: 0.5rem;
+    border: 1px var(--color-border-default) solid;
   }
 
   [class~="height-constrained-code-block"] pre {
     max-height: 32rem;
-    overflow: auto;
   }
 
-  [class~="code-extra"] {
+  [class~="code-example"] {
     margin-top: 1.5rem;
 
-    pre {
+    pre,
+    div {
       margin-top: 0 !important;
       border-top-left-radius: 0 !important;
       border-top-right-radius: 0 !important;

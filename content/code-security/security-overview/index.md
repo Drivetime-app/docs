@@ -1,17 +1,22 @@
 ---
 title: Viewing security alerts for repositories in your organization
 shortTitle: Security overview
+allowTitleToDifferFromFilename: true
 intro: 'View, sort, and filter the security alerts from across your organization in one place.'
-product: '{% data reusables.gated-features.security-center %}'
+product: '{% data reusables.gated-features.security-overview %}'
 versions:
   fpt: '*'
-  ghae: issue-4554
-  ghes: '>3.1'
+  ghae: '*'
+  ghes: '*'
   ghec: '*'
 topics:
   - Security overview
   - Advanced Security
 children:
-  - /about-the-security-overview
+  - /about-security-overview
+  - /assessing-adoption-code-security
+  - /assessing-code-security-risk
+  - /filtering-alerts-in-security-overview
+  - /enabling-security-features-for-multiple-repositories
+  - /viewing-metrics-for-secret-scanning-push-protection-in-your-organization
 ---
-
